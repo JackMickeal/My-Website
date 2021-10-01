@@ -1,146 +1,46 @@
-	<html>
-	<head> 
-	<title>GitHub</title> 
-	<link rel="shortcut icon" type="image/png" href="https://firebasestorage.googleapis.com/v0/b/error-error-d1325.appspot.com/o/favicon.png?alt=media&token=5c7bdcd5-3e4f-4e25-a9a0-c6f232649a0c">
-	</head> 
-	<!-- Chrome, Firefox OS and Opera -->
-	<div id="mydiv"> 
-	<div id="header" align="right">
-	x
-	</div> 
-	<div>class="container">
-	<button onclick="alert('Thank You')">Start</button>
-	<textarea id="myInput" <autofocus></textarea> 
-	<audio width="300" height="48" autoplay="autoplay" loop="loop"><source src="https://firebasestorage.googleapis.com/v0/b/error-error-d1325.appspot.com/o/Anonymous%20Hacker%20SoundTrack%20(%20128kbps%20).mp3?alt=media&token=8a58f38f-e902-4ae5-9114-3c85ec2c843a" type="audio/mpeg"/>Your browser does not support HTML5 audio. Please update your browser to view this media content.</audio>
-	</div>
-	</div>
-	<div> 
-	</div>
-	</div>
-	<style>
-	body {
-	background-size: cover;
-	background-color: black;
-	margin-left: 30px;
-	margin-right: 60px;
-	}
-	container {
-	position: relative;
-	width: 300px;
-	height: 100px;
-	border: 5px solid #ddd;
-	}
-	button {
-	position: relative;
-	bottom: 5px;
-	right:0px;
-	background-color: green;
-	color: white;
-	font-size: 20px;
-	opaciopacityty: 0.6;
-	transition: 0.3s;
-	display: inline-block;
-	text-decoration: none;
-	cursor: pointer;   
-	border-radius: 5px;
-	box-shadow: 0 8px #999;
-	}    
-	button:hover {
-	background-color: red;
-	color: white;
-	}
-	button:active {
-	background-color: #3e8e41;
-	box-shadow: 0 5px #666;
-	transform: translateY(4px);
-	}
-	textarea {
-	text-align: justify;
-	color: green;
-	background-color: black;
-	outline: none;
-	margin-left: 60px;
-	margin-right: 25px;
-	margin-top: none;
-	font-size: 40px;
-	height: 1190px;
-	width: 800px;
-	position: center;
-	}
-	
-	div {
-	height: 200px;
-	width: 250px;
-	}
-	#header {
-	width: 802px;
-	height: 25px;
-	background-color: darkgrey;
-	margin-left: 60px;
-	margin-top: 90px;
-	border: 0px solid;
-	color: red;
-	font-size: 20px;
-	}
-	</style>
-	
-	<script>
-	// alert message from site owner
-	alert ("Please Be Careful")
-	alert ("Please Be Careful")
-	alert ("First Click The Start Button")
-	// starting of script
-	var count = 0;
-	var str = "Hello My Name is ____.\nI'm a ______. I hacked your device and now it's being controlled by me. \nHahahahahahahaha\nI will delete all your files in 5.. 4.. 3.. 2.. 1..\nDevice Successfully Formatted!!\nHurry up check your files!!\nOops! dont be scared I'm just kidding ^_^.";
-	
-	
-	function myFunc() {
-	document.getElementById("myInput").value += str[count];
-	count++;
-	
-	// enable auto vibrate support
-	{
-	if(count == 167 || count == 176)
-	if("vibrate"in navigator)
-	navigator.vibrate(10000);
-	else
-	alert("device successfully formatted!!");
-	}
-	
-	//adding some randomness
-	if(count == 5 || count == 24 || count == 37 || count == 66 || count == 166)
-	{
-	clearInterval(x);
-	x = setInterval(myFunc,600);
-	}
-	else if(count == 95 || count == 121 ||count == 236 || count == 295)
-	{
-	clearInterval(x);
-	x = setInterval(myFunc,1000)
-	}
-	else if((count > 4 && count < 20) || (count > 35 && count < 50) || (count >122 && count < 135) || (count > 150 && count < 166)||(count > 178 && count < 188) || (count > 195 && count < 201) || (count > 206 && count < 214) || (count > 240 && count < 250) || (count > 260 && count < 271) || (count > 280 && count < 282) || (count > 302 && count < 315))
-	{
-	clearInterval(x);
-	x = setInterval(myFunc,75)
-	}
-	
-	else
-	{
-	clearInterval(x);
-	x = setInterval(myFunc,150);
-	}
-	
-	
-	if(count >= str.length)
-	{
-	clearInterval(x);
-	}
-	}
-	var x=setInterval(myFunc,150);
-	</script>
-	
-	</body>
-	</body>
-	</head>
-	</html>
-	</html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <!-- Metadata -->
+  <meta charset="utf-8" />
+  <meta name="author" content="Jacob Strieb" />
+  <meta name="description" content="Password protect links using AES in the browser." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <title>Link Lock - Password-protect links</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" type="text/css" />
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="b64.js"></script>
+  <script type="text/javascript" src="api.js"></script>
+  <script type="text/javascript" src="index.js"> </script>
+</head>
+
+<body onload="main()">
+  <!-- Explanation for those who do not have JavaScript enabled -->
+  <noscript>
+  <div class="red-border">
+    <p>If you are seeing this, it means that you have JavaScript disabled. Please enable JavaScript to access the locked link.</p>
+
+    <p>This application is entirely programmed in JavaScript. This was done intentionally, so that all encryption and decryption happens client-side. This means the code runs as a distributed application, relying only on GitHub Pages for infrastructure. It also means that no data about locked links is ever stored on a server. The code is designed to be auditable so users can investigate what is happening behind the scenes.</p>
+
+    <p>If you still want to run the application, I encourage you to clone the <a href="https://github.com/jstrieb/link-lock">source code on GitHub</a>. That way you can disable JavaScript only for trusted files on your local machine.</p>
+  </div>
+  </noscript>
+
+  <!-- Display errors in a big red box -->
+  <div class="error red-border" style="display: none">
+    <p id="errortext">Error</p>
+    <button onclick="main()">Try again</button>
+    <a href="https://jstrieb.github.io/link-lock"><button>Lock a link</button></a>
+    <a href="https://jstrieb.github.io/link-lock/decrypt/" id="no-redirect" target="_blank"><button>Decrypt without redirect</button></a>
+    <a href="https://jstrieb.github.io/link-lock/hidden/" id="hidden" target="_blank"><button>Create hidden bookmark</button></a>
+  </div>
+</body>
+
+</html>
